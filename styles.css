@@ -21,18 +21,32 @@ body {
 }
 
 .page-container {
-    max-width: 860px;
-    margin: 0 auto;
-    padding: 0 var(--spacing-unit);
+    position: relative;
+    min-height: 100vh;
 }
 
-header {
-    padding: calc(var(--spacing-unit) * 2) 0;
+.landing-page {
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+header.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     border-bottom: 1px solid var(--border);
-    margin-bottom: calc(var(--spacing-unit) * 3);
 }
 
 nav {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 1rem var(--spacing-unit);
     display: flex;
     align-items: center;
     gap: var(--spacing-unit);
@@ -85,12 +99,26 @@ nav {
     text-decoration: none;
 }
 
+.banner {
+    height: 400px;
+    background: linear-gradient(135deg, var(--scout-purple) 0%, #b491f5 100%);
+    margin-bottom: -200px;
+}
+
+.page-content {
+    position: relative;
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-unit);
+}
+
 .pitch {
     font-size: 2.5rem;
     font-weight: 600;
     line-height: 1.2;
     margin: calc(var(--spacing-unit) * 2) 0;
-    color: var(--text-primary);
+    color: white;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .sections {
@@ -98,12 +126,17 @@ nav {
     display: grid;
     gap: calc(var(--spacing-unit) * 2);
     list-style: none;
+    background: var(--background);
+    border-radius: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    padding: calc(var(--spacing-unit) * 2);
 }
 
 .sections li {
     padding: calc(var(--spacing-unit) * 2);
     border: 1px solid var(--border);
     border-radius: 12px;
+    background: white;
 }
 
 .sections h1 {
@@ -120,9 +153,13 @@ footer {
     padding: calc(var(--spacing-unit) * 2) 0;
     border-top: 1px solid var(--border);
     margin-top: calc(var(--spacing-unit) * 3);
+    background: var(--background);
 }
 
 .link-list {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-unit);
     display: flex;
     gap: var(--spacing-unit);
     justify-content: center;
@@ -148,6 +185,11 @@ footer {
     
     .button.long {
         display: none;
+    }
+
+    .banner {
+        height: 300px;
+        margin-bottom: -150px;
     }
 }
 

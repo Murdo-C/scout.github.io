@@ -47,7 +47,7 @@ features                                  :
 
   - title                                 : Customizable for you
     description                           : Scout offers filters to hide replies, recasts, media-only posts, or URL-less posts. You can even choose between the menu or an all-casts feed as your default view, and load up to 50 historical casts from the last 30 days when adding new users.
-    fontawesome_icon_name                 : gear
+    fontawesome_icon_name                 : gears
 
   - title                                 : # New Feature Title
     description                           : # New Feature Description

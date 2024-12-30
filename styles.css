@@ -1,0 +1,57 @@
+:root {
+  --light-tint-color: rgb(0, 122, 255);
+  --dark-tint-color: rgba(10, 132, 255);
+
+  --light-primary-background-color: #ffffff;
+  --dark-primary-background-color: #000000;
+
+  --light-secondary-background-color: #f2f2f2;
+  --dark-secondary-background-color: #28282e;
+
+  --light-primary-text-color: #000000;
+  --dark-primary-text-color: #ffffff;
+
+  --light-button-background-color: #000000;
+  --dark-button-background-color: #ffffff;
+
+  --light-button-text-color: #ffffff;
+  --dark-button-text-color: #ffffff;
+
+  --iphone13-screen-width: 375px;
+  --iphone13-screen-height: 811px;
+  --iphone13-top-bottom-margin: 20px;
+  --iphone13-left-right-margin: 22px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--light-primary-background-color);
+    color: var(--light-primary-text-color);
+    font-family: ui-rounded, -apple-system, BlinkMacSystemFont, Helvetica, Arial;
+    font-size: 1em;
+}
+
+a {
+    color: var(--light-tint-color);
+    text-decoration: none;
+}
+
+a:hover, a.selected {
+    text-decoration: underline;
+}
+
+p {
+    line-height: 1.6em;
+}
+
+h1 {
+    font-size: 1.75em;
+    line-height: 1.3em;
+}
+
+/* Remaining content omitted here for brevity */

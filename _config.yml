@@ -12,23 +12,23 @@ presskit_download_link                    :                                     
 app_icon                                  : # assets/appicon.png                      # Automatically populates if not set and if iOS app ID is set.  Otherwise enter path to icon file manually.
 app_name                                  :                                           # Automatically populates if not set and if iOS app ID is set.  Otherwise enter manually.
 app_price                                 :                                           # Automatically populates if not set and if iOS app ID is set.  Otherwise enter manually.
-app_description                           : Your stock tips are 10x more effective when combined with stonk memes -  Wall Street's Best is the only iMessage sticker app that helps you generate alpha.
+app_description                           : The easiest way to follow your favorite casters
 
 enable_smart_app_banner                   : true                                      # Set to true to show a smart app banner at top of page on mobile devices.
 
 
 # Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
-google_analytics: G-03QNNQ7H1G
+google_analytics: 
 
 
 # Information About Yourself
 your_name                                 : Murdo Connochie                             
 your_link                                 : https://murdo.xyz                     
-your_city                                 : Scotland 🏴󠁧󠁢󠁳󠁣󠁴󠁿
-email_address                             : murdo.connochie+wsb@gmail.com
+your_city                                 : Toronto 🇨🇦
+email_address                             : murdo.connochie+scout@gmail.com
 facebook_username                         :                                           
 instagram_username                        : 
-twitter_username                          : WSBstickers
+twitter_username                          : 
 github_username                           : 
 youtube_username                          :
 
@@ -37,17 +37,17 @@ youtube_username                          :
 # Feature List                            Edit, add or remove features to be presented.
 features                                  :
 
-  - title                                 : 20+ stickers
-    description                           : Improve your financial advice with YOLO encouragement and 'I'm in!' confidence
-    fontawesome_icon_name                 : comments-dollar
+  - title                                 : Follow your favorite Farcasters
+    description                           : Scout lets you follow specific Farcaster users by username or FID. Organize and manage their casts with powerful features like marking casts as read/unread, starring favorites, and filtering content to suit your needs.
+    fontawesome_icon_name                 : user-plus
     
-  - title                                 : Wall Street classics
-    description                           : Includes many of your favourites - to the moon, buy the dip, we like the stock, and more
-    fontawesome_icon_name                 : magic
+  - title                                 : Built for productivity
+    description                           : With features like offline support, fast local caching, pull-to-refresh for the latest casts, and search functionality, Scout is your perfect companion for staying updated on Farcaster conversations.
+    fontawesome_icon_name                 : bolt
 
-  - title                                 : Works across devices
-    description                           : The stickers are available for all iPhones and iPads running iOS 10 or later
-    fontawesome_icon_name                 : mobile
+  - title                                 : Customizable for you
+    description                           : Scout offers filters to hide replies, recasts, media-only posts, or URL-less posts. You can even choose between the menu or an all-casts feed as your default view, and load up to 50 historical casts from the last 30 days when adding new users.
+    fontawesome_icon_name                 : gear
 
   - title                                 : # New Feature Title
     description                           : # New Feature Description

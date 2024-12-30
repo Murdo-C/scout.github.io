@@ -32,3 +32,43 @@ pre code .call {
 }
 
 /* Remaining content omitted here for brevity */
+
+.app-store-badge {
+    display: block;
+    width: 180px;
+    height: 60px;
+    background-image: url('images/app-store-badge.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: calc(var(--spacing-unit) * 2) 0;
+}
+
+.github {
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-image: url('images/github.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.6;
+    transition: opacity 0.2s;
+}
+
+.github:hover {
+    opacity: 1;
+}
+
+.mail {
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-image: url('images/mail.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.6;
+    transition: opacity 0.2s;
+}
+
+.mail:hover {
+    opacity: 1;
+}

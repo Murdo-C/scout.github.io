@@ -384,6 +384,8 @@ nav > ul li a:active {
 	background-size: 400px auto;
 	background-repeat: no-repeat;
 	margin-top: 68px;
+	position: relative;
+	height: 800px;
 }
 
 .iphoneScreen {
@@ -395,52 +397,36 @@ nav > ul li a:active {
 }
 
 .videoContainer {
-	width: 349px;
-	height: 755px;
+	width: 400px;
+	height: 800px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	overflow: hidden;
 	-webkit-clip-path: url(#screenMask);
 	clip-path: url(#screenMask);
-	margin-left: 26px;
-	margin-top: 23px;
-	overflow: hidden;
-	position: relative;
 	background: black;
 }
 
 .videoContainer > video {
-	position: absolute;
-	top: 50%;
-	left: 50%;
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
-	transform: translate(-50%, -50%) scale(1.005);
-	border-radius: 40px;
 }
 
 @media only screen and (max-width: 1070px) {
 
 	.iphonePreview {
 		background-size: 370px auto;
-	}
-
-	.iphoneScreen {
-		width: 322px;
-		margin-left: 24px;
-		margin-top: 22px;
+		height: 740px;
 	}
 
 	.videoContainer {
-		width: 322px;
-		height: 698px;
-		margin-left: 24px;
-		margin-top: 22px;
+		width: 370px;
+		height: 740px;
 	}
-	
-	.videoContainer > video {
-		border-radius: 35px;
-	}
-	
-} 
+
+}
 
 @media only screen and (max-width: 992px) {
 
@@ -451,28 +437,14 @@ nav > ul li a:active {
 		margin-top: 47px;
 		justify-content: center;
 		padding-bottom: 75px;
-	}
-
-	.iphoneScreen {
-		width: 226px;
-		height: 488px;
-		-webkit-clip-path: url(#screenMask);
-		clip-path: url(#screenMask);
-		margin: 0px;
-		margin-top: 17px;
+		height: 520px;
 	}
 
 	.videoContainer {
-		width: 226px;
-		height: 488px;
-		margin-left: 0px;
-		margin-top: 17px;
+		width: 260px;
+		height: 520px;
 	}
 
-	.videoContainer > video {
-		border-radius: 25px;
-	}
-	
 } 
 
 

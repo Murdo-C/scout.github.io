@@ -408,14 +408,11 @@ nav > ul li a:active {
 
 .videoContainer > video {
 	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	min-width: 100%;
-	min-height: 100%;
-	width: auto;
-	height: auto;
-	object-fit: cover;
+	top: 0;
+	left: 0;
+	width: 349px;
+	height: 755px;
+	object-fit: fill;
 }
 
 @media only screen and (max-width: 1070px) {
@@ -438,15 +435,11 @@ nav > ul li a:active {
 	}
 	
 	.videoContainer > video {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		min-width: 100%;
-		min-height: 100%;
-		width: auto;
-		height: auto;
-		object-fit: cover;
+		width: 322px;
+		height: 698px;
+		top: 0;
+		left: 0;
+		object-fit: fill;
 	}
 	
 } 
@@ -479,15 +472,11 @@ nav > ul li a:active {
 	}
 
 	.videoContainer > video {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		min-width: 100%;
-		min-height: 100%;
-		width: auto;
-		height: auto;
-		object-fit: cover;
+		width: 226px;
+		height: 488px;
+		top: 0;
+		left: 0;
+		object-fit: fill;
 	}
 	
 } 

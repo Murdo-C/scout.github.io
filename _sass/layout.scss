@@ -261,7 +261,9 @@ nav > ul li a:active {
 
 .appIconShadow {
 	display: flex;
+	justify-content: center;
 	filter: $drop-shadow;
+	width: 100%;
 }
 
 .appIconLarge {
@@ -327,10 +329,33 @@ nav > ul li a:active {
 
 @media only screen and (max-width: 992px) {
 
-	.appDescription {
+	.appNamePriceContainer {
+		margin-left: 0;
+		align-items: center;
+		text-align: center;
+		width: 100%;
+	}
+
+	.appName {
 		text-align: center;
 	}
-	
+
+	.appPrice {
+		text-align: center;
+	}
+
+	.appDescriptionContainer {
+		text-align: center;
+		align-items: center;
+		margin-top: 30px;
+	}
+
+	.downloadButtonsContainer {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		margin-top: 30px;
+	}
 } 
 
 .downloadButtonsContainer {
@@ -406,10 +431,10 @@ nav > ul li a:active {
 
 .screenvideo {
 	position: absolute;
-	top: 51%;
+	top: 50.5%;
 	left: 50%;
 	width: 325px;
-	height: 704px;
+	height: 708px;
 	transform: translate(-50%, -50%);
 	object-fit: cover;
 	z-index: 1;
@@ -424,7 +449,7 @@ nav > ul li a:active {
 
 	.screenvideo {
 		width: 292px;
-		height: 632px;
+		height: 636px;
 	}
 }
 
@@ -432,11 +457,13 @@ nav > ul li a:active {
 	.container {
 		display: flex;
 		flex-direction: column;
+		min-height: 100vh;
 	}
 
 	.appInfo {
 		display: flex;
 		flex-direction: column;
+		align-items: center;
 		order: 1;
 	}
 
@@ -455,9 +482,26 @@ nav > ul li a:active {
 		margin-top: 20px;
 	}
 
+	footer {
+		order: 4;
+		width: 100%;
+		margin-top: auto;
+	}
+
+	.footerText {
+		width: 100%;
+		text-align: center;
+		padding: 30px 0;
+	}
+
+	.footerIcons {
+		justify-content: center;
+		padding-bottom: 30px;
+	}
+
 	.screenvideo {
 		width: 205px;
-		height: 444px;
+		height: 447px;
 	}
 }
 

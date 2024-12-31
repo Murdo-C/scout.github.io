@@ -382,8 +382,8 @@ nav > ul li a:active {
 	grid-area: p;
 	position: relative;
 	margin-top: 68px;
-	height: 734px;  /* Scaled down from 2936px */
-	width: 363px;   /* Scaled down from 1450px */
+	height: 734px;
+	width: 363px;
 }
 
 .videoContainer {
@@ -407,8 +407,8 @@ nav > ul li a:active {
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	width: 320px;    /* Increased from 270px */
-	height: 693px;   /* Increased proportionally */
+	width: 330px;    /* Increased from 320px */
+	height: 715px;   /* Increased proportionally */
 	transform: translate(-50%, -50%);
 	object-fit: cover;
 	z-index: 1;
@@ -421,40 +421,43 @@ nav > ul li a:active {
 	}
 
 	.screenvideo {
-		width: 288px;    /* Increased proportionally */
-		height: 624px;
+		width: 297px;    /* Increased from 288px */
+		height: 643px;   /* Increased proportionally */
 	}
 }
 
-@media only screen and (max-width: 992px) {
-	.iphonePreview {
-		display: flex;
-		margin: 47px auto 0;  /* Center horizontally */
-		justify-content: center;
-		padding-bottom: 75px;
-		height: 464px;
-		width: 229px;
-		order: 2;  /* Move below app info on mobile */
-	}
-
-	.screenvideo {
-		width: 202px;
-		height: 438px;
-	}
-
-	.appInfo {
-		order: 1;  /* Move above iPhone preview on mobile */
-	}
-}
-
-// Ensure container adjusts for reordering
 @media only screen and (max-width: 992px) {
 	.container {
 		display: flex;
 		flex-direction: column;
 	}
-}
 
+	.appInfo {
+		display: flex;
+		flex-direction: column;
+		order: 1;
+	}
+
+	.iphonePreview {
+		display: flex;
+		margin: 30px auto 0;
+		justify-content: center;
+		padding-bottom: 75px;
+		height: 464px;
+		width: 229px;
+		order: 2;
+	}
+
+	.features {
+		order: 3;
+		margin-top: 20px;
+	}
+
+	.screenvideo {
+		width: 208px;
+		height: 450px;
+	}
+}
 
 // Feature List
 

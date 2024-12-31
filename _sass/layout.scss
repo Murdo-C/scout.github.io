@@ -403,14 +403,18 @@ nav > ul li a:active {
 	margin-top: 23px;
 	overflow: hidden;
 	position: relative;
+	background: black;
 }
 
 .videoContainer > video {
 	position: absolute;
-	top: 0;
-	left: 0;
-	width: 349px;
-	height: 755px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	min-width: 100%;
+	min-height: 100%;
+	width: auto;
+	height: auto;
 	object-fit: cover;
 }
 
@@ -435,10 +439,13 @@ nav > ul li a:active {
 	
 	.videoContainer > video {
 		position: absolute;
-		top: 0;
-		left: 0;
-		width: 322px;
-		height: 698px;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		min-width: 100%;
+		min-height: 100%;
+		width: auto;
+		height: auto;
 		object-fit: cover;
 	}
 	
@@ -473,10 +480,13 @@ nav > ul li a:active {
 
 	.videoContainer > video {
 		position: absolute;
-		top: 0;
-		left: 0;
-		width: 226px;
-		height: 488px;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		min-width: 100%;
+		min-height: 100%;
+		width: auto;
+		height: auto;
 		object-fit: cover;
 	}
 	

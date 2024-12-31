@@ -450,8 +450,8 @@ nav > ul li a:active {
 
 	.screenvideo {
 		width: 292px;
-		height: auto;
-		aspect-ratio: 498/1080;
+		height: 632px;
+		transform: translate(-50%, -50%) scale(0.95);
 	}
 }
 
@@ -505,7 +505,8 @@ nav > ul li a:active {
 
 	.screenvideo {
 		width: 205px;
-		height: auto;
+		height: 444px;
+		transform: translate(-50%, -50%) scale(0.92);
 	}
 }
 

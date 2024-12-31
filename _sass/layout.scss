@@ -261,9 +261,8 @@ nav > ul li a:active {
 
 .appIconShadow {
 	display: flex;
-	justify-content: center;
+	justify-content: flex-start;
 	filter: $drop-shadow;
-	width: 100%;
 }
 
 .appIconLarge {
@@ -409,6 +408,7 @@ nav > ul li a:active {
 	margin-top: 68px;
 	height: 734px;
 	width: 363px;
+	aspect-ratio: 363/734;
 }
 
 .videoContainer {
@@ -417,6 +417,7 @@ nav > ul li a:active {
 	height: 100%;
 	overflow: hidden;
 	border-radius: 40px;
+	aspect-ratio: 363/734;
 }
 
 .phoneMask {
@@ -443,13 +444,14 @@ nav > ul li a:active {
 
 @media only screen and (max-width: 1070px) {
 	.iphonePreview {
-		height: 660px;
+		height: auto;
 		width: 326px;
 	}
 
 	.screenvideo {
 		width: 292px;
-		height: 636px;
+		height: auto;
+		aspect-ratio: 498/1080;
 	}
 }
 
@@ -465,6 +467,8 @@ nav > ul li a:active {
 		flex-direction: column;
 		align-items: center;
 		order: 1;
+		width: 100%;
+		text-align: center;
 	}
 
 	.iphonePreview {
@@ -472,7 +476,7 @@ nav > ul li a:active {
 		margin: 30px auto 0;
 		justify-content: center;
 		padding-bottom: 75px;
-		height: 464px;
+		height: auto;
 		width: 229px;
 		order: 2;
 	}
@@ -501,7 +505,7 @@ nav > ul li a:active {
 
 	.screenvideo {
 		width: 205px;
-		height: 447px;
+		height: auto;
 	}
 }
 

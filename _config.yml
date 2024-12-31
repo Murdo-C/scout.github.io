@@ -37,17 +37,17 @@ youtube_username                          :
 # Feature List                            Edit, add or remove features to be presented.
 features                                  :
 
-  - title                                 : Follow your favorite Farcasters
-    description                           : Scout lets you follow specific Farcaster users by username or FID. Organize and manage their casts with powerful features like marking casts as read/unread, starring favorites, and filtering content to suit your needs.
-    fontawesome_icon_name                 : user-plus
-    
-  - title                                 : Built for productivity
-    description                           : With features like offline support, fast local caching, pull-to-refresh for the latest casts, and search functionality, Scout is your perfect companion for staying updated on Farcaster conversations.
-    fontawesome_icon_name                 : bolt
+  - title: Follow Your Favorites
+    description: Scout makes it easy to follow Farcasters by username or FID. Stay organized by marking casts as read/unread.
+    fontawesome_icon_name: user-plus
 
-  - title                                 : Customizable for you
-    description                           : Scout offers filters to hide replies, recasts, media-only posts, or URL-less posts. You can even choose between the menu or an all-casts feed as your default view, and load up to 50 historical casts from the last 30 days when adding new users.
-    fontawesome_icon_name                 : magic
+  - title: Built for Productivity
+    description: Stay on top of conversations with offline support, saved casts, and app search, all in a native Swift app. 
+    fontawesome_icon_name: bolt
+
+  - title: Fully Customizable
+    description: Tailor Scout to your needs with filters to hide replies, recasts, or media-only posts. 
+    fontawesome_icon_name: magic
 
   - title                                 : # New Feature Title
     description                           : # New Feature Description

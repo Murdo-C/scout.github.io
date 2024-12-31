@@ -407,8 +407,8 @@ nav > ul li a:active {
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	width: 270px;    /* Scaled from 498px to match iPhone screen area */
-	height: 585px;   /* Scaled from 1080px to match iPhone screen area */
+	width: 320px;    /* Increased from 270px */
+	height: 693px;   /* Increased proportionally */
 	transform: translate(-50%, -50%);
 	object-fit: cover;
 	z-index: 1;
@@ -421,24 +421,37 @@ nav > ul li a:active {
 	}
 
 	.screenvideo {
-		width: 243px;
-		height: 526px;
+		width: 288px;    /* Increased proportionally */
+		height: 624px;
 	}
 }
 
 @media only screen and (max-width: 992px) {
 	.iphonePreview {
 		display: flex;
-		margin-top: 47px;
+		margin: 47px auto 0;  /* Center horizontally */
 		justify-content: center;
 		padding-bottom: 75px;
 		height: 464px;
 		width: 229px;
+		order: 2;  /* Move below app info on mobile */
 	}
 
 	.screenvideo {
-		width: 171px;
-		height: 370px;
+		width: 202px;
+		height: 438px;
+	}
+
+	.appInfo {
+		order: 1;  /* Move above iPhone preview on mobile */
+	}
+}
+
+// Ensure container adjusts for reordering
+@media only screen and (max-width: 992px) {
+	.container {
+		display: flex;
+		flex-direction: column;
 	}
 }
 

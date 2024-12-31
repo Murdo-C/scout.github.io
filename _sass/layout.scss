@@ -386,6 +386,7 @@ nav > ul li a:active {
 	margin-top: 68px;
 	position: relative;
 	height: 800px;
+	width: 400px;
 }
 
 .iphoneScreen {
@@ -397,11 +398,11 @@ nav > ul li a:active {
 }
 
 .videoContainer {
-	width: 400px;
-	height: 800px;
+	width: 349px;
+	height: 755px;
 	position: absolute;
-	top: 0;
-	left: 0;
+	top: 23px;
+	left: 26px;
 	overflow: hidden;
 	-webkit-clip-path: url(#screenMask);
 	clip-path: url(#screenMask);
@@ -412,10 +413,10 @@ nav > ul li a:active {
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	width: 110%;
-	height: 110%;
+	width: 115%;
+	height: 115%;
 	object-fit: cover;
-	transform: translate(-50%, -50%) scale(1.05);
+	transform: translate(-50%, -50%) scale(1.15);
 }
 
 @media only screen and (max-width: 1070px) {
@@ -423,19 +424,16 @@ nav > ul li a:active {
 	.iphonePreview {
 		background-size: 370px auto;
 		height: 740px;
+		width: 370px;
 	}
 
 	.videoContainer {
-		width: 370px;
-		height: 740px;
-		transform: scale(1);
+		width: 322px;
+		height: 698px;
+		top: 22px;
+		left: 24px;
 	}
 	
-	.videoContainer > video {
-		width: 110%;
-		height: 110%;
-	}
-
 }
 
 @media only screen and (max-width: 992px) {
@@ -448,19 +446,16 @@ nav > ul li a:active {
 		justify-content: center;
 		padding-bottom: 75px;
 		height: 520px;
+		width: 260px;
 	}
 
 	.videoContainer {
-		width: 260px;
-		height: 520px;
-		transform: scale(1);
+		width: 226px;
+		height: 488px;
+		top: 17px;
+		left: 17px;
 	}
 	
-	.videoContainer > video {
-		width: 110%;
-		height: 110%;
-	}
-
 } 
 
 

@@ -9,23 +9,13 @@
                 <div class="container">
                     {% include header.html %}
                     <div class="iphonePreview">
-                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 400 800" style="position: absolute; left: 0; top: 0; width: 400px; height: 800px;">
-                            <defs>
-                                <clipPath id="screenMask">
-                                    <path d="M0,0 L400,0 L400,800 L0,800 L0,0 Z M85,45 C85,36.7157288 91.7157288,30 100,30 L300,30 C308.284271,30 315,36.7157288 315,45 L315,755 C315,763.284271 308.284271,770 300,770 L100,770 C91.7157288,770 85,763.284271 85,755 L85,45 Z"/>
-                                </clipPath>
-                            </defs>
-                        </svg>
-
                         <div class="videoContainer">
+                            <img class="phoneMask" src="assets/black.png" alt="iPhone mask">
                             <video class="screenvideo" autoplay="autoplay" controls="controls" playsinline>
+                                <source src="assets/videos/Scout-App-Preview-web.webm" type="video/webm">
+                                <source src="assets/videos/Scout-App-Preview-web.mp4" type="video/mp4">
                             </video>
-                        </div>  
-                        
-                        <img class="iphoneScreen hidden" src="" alt="">
-
-                        {% include screencontent.html %}
-
+                        </div>
                     </div>
                     <div class="appInfo">
                         <div class="appIconShadow">

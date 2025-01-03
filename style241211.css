@@ -1,11 +1,11 @@
 :root {
-	--bg-color: rgba(255,214,9,1);
-	--color: rgba(60,50,30,1);
-	--content-bg-color: rgba(30,30,25,1);
-	--content-secondary-bg-color: rgba(35,35,30,1);
-	--content-tertiary-bg-color: rgba(40,40,35,1);
-	--content-title-color: rgba(255,255,255,0.85);
-	--content-color: rgba(255,255,255,0.6);
+	--bg-color: rgba(138, 99, 210, 1); /* Base color */
+	--color: rgba(32, 23, 255, 1); /* Darker derivative */
+	--content-bg-color: rgba(16, 14, 255, 1); /* Slightly darker */
+	--content-secondary-bg-color: rgba(19, 16, 255, 1); /* Incrementally lighter */
+	--content-tertiary-bg-color: rgba(22, 19, 255, 1); /* Another step lighter */
+	--content-title-color: rgba(255, 255, 255, 0.85); /* Remains bright white */
+	--content-color: rgba(255, 255, 255, 0.6); /* Slightly translucent white */
 }
 
 * {
@@ -14,18 +14,17 @@
 
 html, body {
 	overflow-x: hidden;
-	background-color: var(--bg-color);
-	color: var(--color);
+	background-color: rgba(138, 99, 210, 1); /* --bg-color */
+	color: rgba(32, 23, 255, 1); /* --color */
 	margin: 0;
 	padding: 0;
 	font-family: -apple-system-ui-rounded, ui-rounded, -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
-
 header nav ul {
 	position: relative;
 	display: block;
-	border-bottom: 1px solid var(--color);
+	border-bottom: 1px solid rgba(32, 23, 255, 1); /* --color */
 	list-style: none;
 	margin: 0;
 	padding: 0;
@@ -37,9 +36,8 @@ header nav ul li {
 	padding: 20px 0;
 	margin: 0;
 	font-size: 0.8em;
-	/*text-transform: uppercase;*/
 	text-align: left;
-	color: rgba(30,30,25,0.7);
+	color: rgba(16, 14, 255, 0.7); /* --content-bg-color with opacity */
 	font-weight: 500;
 }
 
@@ -49,16 +47,14 @@ header nav ul li + li {
 header nav ul li a {
 	text-decoration: none;
 	text-align: right;
-	/*color: rgba(60,50,30,1.0);*/
-	color: rgba(254,215,9,1);
-	background-color: var(--content-bg-color);
+	color: rgba(254, 215, 9, 1);
+	background-color: rgba(16, 14, 255, 1); /* --content-bg-color */
 	padding: 3px 4px 3px 8px;
 	border-radius: 5px;
 	opacity: 0.6;
 	transition: opacity 0.3s;
 }
 header nav ul li a:hover {
-	/*text-shadow: 0 0 20px rgba(0,0,0,0.5);*/
 	opacity: 0.85;
 }
 
@@ -66,9 +62,8 @@ header nav ul li a:hover {
 	width: 100px;
 	height: 100px;
 	border-radius: 20%;
-	background: rgba(0,0,0,0.075);
-	/*border: 1px solid var(--color);*/
-	box-shadow: 0 0 0 1px var(--color);
+	background: rgba(0, 0, 0, 0.075);
+	box-shadow: 0 0 0 1px rgba(32, 23, 255, 1); /* --color */
 }
 
 .icon:before {
@@ -80,9 +75,8 @@ header nav ul li a:hover {
 	top: 15%;
 	left: 15%;
 	border-radius: 50%;
-	background-color: var(--bg-color);
-	/*border: 1px solid var(--color);*/
-	box-shadow: 0 0 0 1px var(--color);
+	background-color: rgba(138, 99, 210, 1); /* --bg-color */
+	box-shadow: 0 0 0 1px rgba(32, 23, 255, 1); /* --color */
 }
 
 .icon:after {
@@ -94,9 +88,8 @@ header nav ul li a:hover {
 	top: 25%;
 	left: 25%;
 	border-radius: 50%;
-	background-color: var(--bg-color);
-	/*border: 1px solid var(--color);*/
-	box-shadow: 0 0 0 1px var(--color);
+	background-color: rgba(138, 99, 210, 1); /* --bg-color */
+	box-shadow: 0 0 0 1px rgba(32, 23, 255, 1); /* --color */
 }
 
 header > div,
@@ -115,7 +108,6 @@ header > div {
 	margin: 5vw auto 0 auto;
 }
 
-
 .main > div {
 	margin: 0 auto 100px auto;
 }
@@ -124,7 +116,6 @@ header .icon {
 	position: absolute;
 	top: 0;
 	left: 0;
-
 	width: 4em;
 	height: 4em;
 }
@@ -151,17 +142,16 @@ header hr {
 	padding: 0;
 	margin: 1em 0;
 	height: 1px;
-	background: var(--color);
+	background: rgba(32, 23, 255, 1); /* --color */
 	border: none;
 }
 .main hr {
 	padding: 0;
 	margin: 4em 0;
 	height: 3px;
-	background: var(--bg-color);
+	background: rgba(138, 99, 210, 1); /* --bg-color */
 	border: none;
 }
-
 
 header span.nav {
 	opacity: 0.66;
@@ -172,7 +162,7 @@ header a.nav {
 	position: relative;
 	display: inline-block;
 	padding: 0 0 1.4em 1em;
-	color: var(--color);
+	color: rgba(32, 23, 255, 1); /* --color */
 	text-decoration: none;
 	font-weight: 600;
 	white-space: nowrap;
@@ -215,7 +205,6 @@ header a.download:hover {
 	opacity: 1;
 }
 
-
 header a.contact {
 	position: absolute;
 	right: 0;
@@ -234,13 +223,12 @@ header a.nav:hover:before {
 
 .main {
 	padding: 2em 0;
-	background-color: var(--content-bg-color);
-	color: var(--content-color);
+	background-color: rgba(16, 14, 255, 1); /* --content-bg-color */
+	color: rgba(255, 255, 255, 0.6); /* --content-color */
 }
 
-
 .main.store {
-	background-color: var(--content-bg-color);
+	background-color: rgba(16, 14, 255, 1); /* --content-bg-color */
 	height: auto;
 	margin-top: 2em;
 	margin-bottom: 0;
@@ -284,37 +272,26 @@ header a.nav:hover:before {
 .main.store a.download:hover {
 	opacity: 1;
 	box-shadow: 0 5px 20px black;
-/*	transform: scale(1.05, 1.05);*/
 }
 .main.store a.download:active {
 	opacity: 1;
 	box-shadow: 0 0 2px black;
-/*	transform: scale(0.95, 0.95) !important;*/
 }
-
-
-
 
 .main.award {
 	padding: 0;
 }
 
-
 .main.award > div {
-/*	background-color: var(--content-tertiary-bg-color);
-	border: 1px solid rgba(255,255,255,0.05);
-	box-shadow: 0 0 20px rgba(0,0,0,0.2);
-	padding: 10px 20px;
-	border-radius: 10px;*/
 	margin-bottom: 0;
 	padding-bottom: 2em;
-	border-bottom: 1px solid rgba(255,255,255,0.1);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .main h2 {
 	line-height: 1.3;
 	font-size: 1.1em;
-	color: var(--content-title-color);
+	color: rgba(255, 255, 255, 0.85); /* --content-title-color */
 }
 
 .main img {
@@ -335,7 +312,7 @@ header a.nav:hover:before {
 
 .main ol {
 	list-style-type: none;
-	list-style-position:; inside;
+	list-style-position: inside;
 	counter-reset: li;
 	margin: 0 0 4em 0;
 	padding: 0;
@@ -355,10 +332,7 @@ header a.nav:hover:before {
 	font-weight: 100;
 	content: counter(li);
 	padding-right: 0.3em;
-/*	content: "◎";*/
-/*	padding-right: 0.2em;*/
-	
-	color: var(--bg-color);
+	color: rgba(138, 99, 210, 1); /* --bg-color */
 	display: inline-block;
 }
 .main ol li.none:before {
@@ -368,6 +342,6 @@ header a.nav:hover:before {
 
 .main ol li a {
 	text-decoration: none;
-	color: var(--bg-color);
+	color: rgba(138, 99, 210, 1); /* --bg-color */
 	font-weight: 600;
 }

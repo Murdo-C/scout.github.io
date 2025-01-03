@@ -1,0 +1,373 @@
+:root {
+	--bg-color: rgba(255,214,9,1);
+	--color: rgba(60,50,30,1);
+	--content-bg-color: rgba(30,30,25,1);
+	--content-secondary-bg-color: rgba(35,35,30,1);
+	--content-tertiary-bg-color: rgba(40,40,35,1);
+	--content-title-color: rgba(255,255,255,0.85);
+	--content-color: rgba(255,255,255,0.6);
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html, body {
+	overflow-x: hidden;
+	background-color: var(--bg-color);
+	color: var(--color);
+	margin: 0;
+	padding: 0;
+	font-family: -apple-system-ui-rounded, ui-rounded, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+
+header nav ul {
+	position: relative;
+	display: block;
+	border-bottom: 1px solid var(--color);
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+header nav ul li {
+	width: 49%;
+	display: inline-block;
+	padding: 20px 0;
+	margin: 0;
+	font-size: 0.8em;
+	/*text-transform: uppercase;*/
+	text-align: left;
+	color: rgba(30,30,25,0.7);
+	font-weight: 500;
+}
+
+header nav ul li + li {
+	text-align: right;
+}
+header nav ul li a {
+	text-decoration: none;
+	text-align: right;
+	/*color: rgba(60,50,30,1.0);*/
+	color: rgba(254,215,9,1);
+	background-color: var(--content-bg-color);
+	padding: 3px 4px 3px 8px;
+	border-radius: 5px;
+	opacity: 0.6;
+	transition: opacity 0.3s;
+}
+header nav ul li a:hover {
+	/*text-shadow: 0 0 20px rgba(0,0,0,0.5);*/
+	opacity: 0.85;
+}
+
+.icon {
+	width: 100px;
+	height: 100px;
+	border-radius: 20%;
+	background: rgba(0,0,0,0.075);
+	/*border: 1px solid var(--color);*/
+	box-shadow: 0 0 0 1px var(--color);
+}
+
+.icon:before {
+	position: absolute;
+	box-sizing: border-box;
+	content: ' ';
+	width: 70%;
+	height: 70%;
+	top: 15%;
+	left: 15%;
+	border-radius: 50%;
+	background-color: var(--bg-color);
+	/*border: 1px solid var(--color);*/
+	box-shadow: 0 0 0 1px var(--color);
+}
+
+.icon:after {
+	position: absolute;
+	box-sizing: border-box;
+	content: ' ';
+	width: 50%;
+	height: 50%;
+	top: 25%;
+	left: 25%;
+	border-radius: 50%;
+	background-color: var(--bg-color);
+	/*border: 1px solid var(--color);*/
+	box-shadow: 0 0 0 1px var(--color);
+}
+
+header > div,
+header > nav,
+.main > div {
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+	position: relative;
+	max-width: 600px;
+}
+
+header > nav {
+	margin: 0 auto 0 auto;
+}
+header > div {
+	margin: 5vw auto 0 auto;
+}
+
+
+.main > div {
+	margin: 0 auto 100px auto;
+}
+
+header .icon {
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	width: 4em;
+	height: 4em;
+}
+
+header h1 {
+	margin: 0 0 0 1.2em;
+	padding: 0;
+	line-height: 0.85;
+	padding: 0;
+	font-size: 4em;
+	font-weight: 800;
+	line-height: 1;
+	font-family: ui-serif, -apple-system-ui-serif, Charter, serif;
+}
+
+header p {
+	padding: 0;
+	margin: 5vw 0 0 0;
+	line-height: 1.2;
+	opacity: 0.66;
+}
+
+header hr {
+	padding: 0;
+	margin: 1em 0;
+	height: 1px;
+	background: var(--color);
+	border: none;
+}
+.main hr {
+	padding: 0;
+	margin: 4em 0;
+	height: 3px;
+	background: var(--bg-color);
+	border: none;
+}
+
+
+header span.nav {
+	opacity: 0.66;
+	font-size: 0.9em;
+}
+header a.nav {
+	font-size: 0.9em;
+	position: relative;
+	display: inline-block;
+	padding: 0 0 1.4em 1em;
+	color: var(--color);
+	text-decoration: none;
+	font-weight: 600;
+	white-space: nowrap;
+}
+header a.download {
+	margin: 0 0.2em;
+	padding-left: 0.9em;
+	color: transparent;
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 38px;
+	mix-blend-mode: darken;	
+	filter: invert();
+	border-radius: 10px;
+	border: 1px solid transparent;
+	opacity: 0.66;
+}
+header div.store {
+	margin-top: 0.5em;
+	margin-bottom: 1em;
+	text-align: center;
+}
+header a.download:before {
+	opacity: 0.33;
+	position: absolute;
+	left: 0;
+	top: 0;
+	content: '↓';
+}
+
+header a.macos {
+	background-image: url(store/macos.svg);
+	width: 152px;
+}
+header a.ios {
+	background-image: url(store/ios.svg);
+	width: 115px;
+}
+header a.download:hover {
+	opacity: 1;
+}
+
+
+header a.contact {
+	position: absolute;
+	right: 0;
+}
+header a.contact:before {
+	opacity: 0.33;
+	position: absolute;
+	left: 0;
+	top: 0;
+	content: '→';
+}
+
+header a.nav:hover:before {
+	opacity: 1.0;
+}
+
+.main {
+	padding: 2em 0;
+	background-color: var(--content-bg-color);
+	color: var(--content-color);
+}
+
+
+.main.store {
+	background-color: var(--content-bg-color);
+	height: auto;
+	margin-top: 2em;
+	margin-bottom: 0;
+	border: 1px solid transparent;
+	padding: 1em 0;
+}
+
+.main.store div {
+	margin-bottom: 0;
+}
+
+.main.store a.download {
+	display: inline-block;
+	margin: 0.5em 0.2em;
+	padding-left: 0.9em;
+	color: transparent;
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 40px;
+	opacity: 0.95;
+	border-radius: 7px;
+	box-shadow: 0 0 2px black;
+	z-index: 1;
+	transition: opacity 0.2s, box-shadow 0.2s, transform 0.3s;
+}
+.main.store a.download:before {
+	opacity: 0.33;
+	position: absolute;
+	left: 0;
+	top: 0;
+	content: '↓';
+}
+.main.store a.macos {
+	background-image: url(store/macos-white.svg);
+	width: 157px;
+}
+.main.store a.ios {
+	background-image: url(store/ios-white.svg);
+	width: 120px;
+}
+.main.store a.download:hover {
+	opacity: 1;
+	box-shadow: 0 5px 20px black;
+/*	transform: scale(1.05, 1.05);*/
+}
+.main.store a.download:active {
+	opacity: 1;
+	box-shadow: 0 0 2px black;
+/*	transform: scale(0.95, 0.95) !important;*/
+}
+
+
+
+
+.main.award {
+	padding: 0;
+}
+
+
+.main.award > div {
+/*	background-color: var(--content-tertiary-bg-color);
+	border: 1px solid rgba(255,255,255,0.05);
+	box-shadow: 0 0 20px rgba(0,0,0,0.2);
+	padding: 10px 20px;
+	border-radius: 10px;*/
+	margin-bottom: 0;
+	padding-bottom: 2em;
+	border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.main h2 {
+	line-height: 1.3;
+	font-size: 1.1em;
+	color: var(--content-title-color);
+}
+
+.main img {
+	width: 100%;
+	border-radius: 5px;
+	margin: 0.5em 0 1em 0;
+	box-shadow: 0 0 2px 0 black;
+}
+
+.main.award img {
+	border-radius: 0;
+	margin: 0;
+	box-shadow: none;
+	width: auto;
+	height: 150px;
+	mix-blend-mode: lighten;
+}
+
+.main ol {
+	list-style-type: none;
+	list-style-position:; inside;
+	counter-reset: li;
+	margin: 0 0 4em 0;
+	padding: 0;
+}
+.main.award ol {
+	margin-bottom: 0;
+}
+
+.main ol li {
+	line-height: 1.8;
+	font-size: 0.9em;
+	margin: 0 0 1em 0;
+}
+
+.main ol li:before {
+	counter-increment: li;
+	font-weight: 100;
+	content: counter(li);
+	padding-right: 0.3em;
+/*	content: "◎";*/
+/*	padding-right: 0.2em;*/
+	
+	color: var(--bg-color);
+	display: inline-block;
+}
+.main ol li.none:before {
+	content: '';
+	padding-right: 0;
+}
+
+.main ol li a {
+	text-decoration: none;
+	color: var(--bg-color);
+	font-weight: 600;
+}

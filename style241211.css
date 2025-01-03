@@ -47,7 +47,7 @@ header nav ul li + li {
 header nav ul li a {
 	text-decoration: none;
 	text-align: right;
-	color: rgba(254, 215, 9, 1);
+	color: rgba(138, 99, 210, 1);
 	background-color: rgba(16, 14, 255, 1); /* --content-bg-color */
 	padding: 3px 4px 3px 8px;
 	border-radius: 5px;

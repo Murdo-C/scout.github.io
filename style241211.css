@@ -1,11 +1,11 @@
 :root {
 	--bg-color: rgba(138, 99, 210, 1); /* Base color */
-	--color: rgba(32, 23, 255, 1); /* Darker derivative */
-	--content-bg-color: rgba(16, 14, 255, 1); /* Slightly darker */
-	--content-secondary-bg-color: rgba(19, 16, 255, 1); /* Incrementally lighter */
-	--content-tertiary-bg-color: rgba(22, 19, 255, 1); /* Another step lighter */
-	--content-title-color: rgba(255, 255, 255, 0.85); /* Remains bright white */
-	--content-color: rgba(255, 255, 255, 0.6); /* Slightly translucent white */
+	--color: rgba(30, 30, 25, 1); /* Main text color */
+	--content-bg-color: rgba(30, 30, 25, 0.95); /* Content background */
+	--content-secondary-bg-color: rgba(30, 30, 25, 0.9); /* Slightly lighter */
+	--content-tertiary-bg-color: rgba(30, 30, 25, 0.85); /* Another step lighter */
+	--content-title-color: rgba(255, 255, 255, 0.95); /* Bright white for titles */
+	--content-color: rgba(255, 255, 255, 0.8); /* Slightly translucent white for content */
 }
 
 * {
@@ -15,7 +15,7 @@
 html, body {
 	overflow-x: hidden;
 	background-color: rgba(138, 99, 210, 1); /* --bg-color */
-	color: rgba(32, 23, 255, 1); /* --color */
+	color: rgba(30, 30, 25, 1); /* --color */
 	margin: 0;
 	padding: 0;
 	font-family: -apple-system-ui-rounded, ui-rounded, -apple-system, BlinkMacSystemFont, sans-serif;
@@ -24,7 +24,7 @@ html, body {
 header nav ul {
 	position: relative;
 	display: block;
-	border-bottom: 1px solid rgba(32, 23, 255, 1); /* --color */
+	border-bottom: 1px solid rgba(30, 30, 25, 0.2); /* --color with opacity */
 	list-style: none;
 	margin: 0;
 	padding: 0;
@@ -37,7 +37,7 @@ header nav ul li {
 	margin: 0;
 	font-size: 0.8em;
 	text-align: left;
-	color: rgba(16, 14, 255, 0.7); /* --content-bg-color with opacity */
+	color: rgba(30, 30, 25, 0.8); /* --color with opacity */
 	font-weight: 500;
 }
 
@@ -47,15 +47,15 @@ header nav ul li + li {
 header nav ul li a {
 	text-decoration: none;
 	text-align: right;
-	color: rgba(138, 99, 210, 1);
-	background-color: rgba(16, 14, 255, 1); /* --content-bg-color */
+	color: rgba(255, 255, 255, 0.9);
+	background-color: rgba(30, 30, 25, 0.95); /* --content-bg-color */
 	padding: 3px 4px 3px 8px;
 	border-radius: 5px;
-	opacity: 0.6;
+	opacity: 0.9;
 	transition: opacity 0.3s;
 }
 header nav ul li a:hover {
-	opacity: 0.85;
+	opacity: 1;
 }
 
 .icon {
@@ -63,7 +63,7 @@ header nav ul li a:hover {
 	height: 100px;
 	border-radius: 20%;
 	background: rgba(0, 0, 0, 0.075);
-	box-shadow: 0 0 0 1px rgba(32, 23, 255, 1); /* --color */
+	box-shadow: 0 0 0 1px rgba(30, 30, 25, 0.2); /* --color with opacity */
 }
 
 .icon:before {
@@ -76,7 +76,7 @@ header nav ul li a:hover {
 	left: 15%;
 	border-radius: 50%;
 	background-color: rgba(138, 99, 210, 1); /* --bg-color */
-	box-shadow: 0 0 0 1px rgba(32, 23, 255, 1); /* --color */
+	box-shadow: 0 0 0 1px rgba(30, 30, 25, 0.2); /* --color with opacity */
 }
 
 .icon:after {
@@ -89,7 +89,7 @@ header nav ul li a:hover {
 	left: 25%;
 	border-radius: 50%;
 	background-color: rgba(138, 99, 210, 1); /* --bg-color */
-	box-shadow: 0 0 0 1px rgba(32, 23, 255, 1); /* --color */
+	box-shadow: 0 0 0 1px rgba(30, 30, 25, 0.2); /* --color with opacity */
 }
 
 header > div,
@@ -142,7 +142,7 @@ header hr {
 	padding: 0;
 	margin: 1em 0;
 	height: 1px;
-	background: rgba(32, 23, 255, 1); /* --color */
+	background: rgba(30, 30, 25, 0.2); /* --color with opacity */
 	border: none;
 }
 .main hr {
@@ -223,12 +223,12 @@ header a.nav:hover:before {
 
 .main {
 	padding: 2em 0;
-	background-color: rgba(16, 14, 255, 1); /* --content-bg-color */
-	color: rgba(255, 255, 255, 0.6); /* --content-color */
+	background-color: rgba(30, 30, 25, 0.95); /* --content-bg-color */
+	color: rgba(255, 255, 255, 0.8); /* --content-color */
 }
 
 .main.store {
-	background-color: rgba(16, 14, 255, 1); /* --content-bg-color */
+	background-color: rgba(30, 30, 25, 0.95); /* --content-bg-color */
 	height: auto;
 	margin-top: 2em;
 	margin-bottom: 0;

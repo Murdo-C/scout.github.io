@@ -1,9 +1,9 @@
 :root {
 	--bg-color: rgba(138, 99, 210, 1); /* Base color */
 	--color: rgba(30, 30, 25, 1); /* Main text color */
-	--content-bg-color: rgba(30, 30, 25, 0.95); /* Content background */
-	--content-secondary-bg-color: rgba(30, 30, 25, 0.9); /* Slightly lighter */
-	--content-tertiary-bg-color: rgba(30, 30, 25, 0.85); /* Another step lighter */
+	--content-bg-color: rgba(25, 18, 38, 0.95); /* Content background */
+	--content-secondary-bg-color: rgba(25, 18, 38, 0.9); /* Slightly lighter */
+	--content-tertiary-bg-color: rgba(25, 18, 38, 0.85); /* Another step lighter */
 	--content-title-color: rgba(255, 255, 255, 0.95); /* Bright white for titles */
 	--content-color: rgba(255, 255, 255, 0.8); /* Slightly translucent white for content */
 }
@@ -18,6 +18,7 @@ html, body {
 	color: rgba(30, 30, 25, 1); /* --color */
 	margin: 0;
 	padding: 0;
+	padding-top: 45px;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
@@ -48,7 +49,7 @@ header nav ul li a {
 	text-decoration: none;
 	text-align: right;
 	color: rgba(255, 255, 255, 0.9);
-	background-color: rgba(30, 30, 25, 0.95); /* --content-bg-color */
+	background-color: rgba(25, 18, 38, 0.95); /* --content-bg-color */
 	padding: 3px 4px 3px 8px;
 	border-radius: 5px;
 	opacity: 0.9;
@@ -87,6 +88,17 @@ header .icon {
 	height: 4em;
 }
 
+/* Remove old header nav styles */
+header nav {
+	display: none;
+}
+
+/* Adjust header spacing */
+header > div {
+	margin: 2vw auto 0 auto;
+	text-align: left;
+}
+
 header > div,
 header > nav,
 .main > div {
@@ -94,18 +106,12 @@ header > nav,
 	border-right: 20px solid transparent;
 	position: relative;
 	max-width: 700px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 header > nav {
 	margin: 0 auto 0 auto;
-}
-
-header > div {
-	margin: 5vw auto 0 auto;
-}
-
-.main > div {
-	margin: 0 auto 100px auto;
 }
 
 header h1 {
@@ -213,12 +219,12 @@ header a.nav:hover:before {
 
 .main {
 	padding: 2em 0;
-	background-color: rgba(30, 30, 25, 0.95);
+	background-color: rgba(25, 18, 38, 0.95);
 	color: rgba(255, 255, 255, 0.8);
 }
 
 .main.store {
-	background-color: rgba(30, 30, 25, 0.95); /* --content-bg-color */
+	background-color: rgba(25, 18, 38, 0.95); /* --content-bg-color */
 	height: auto;
 	margin-top: 1em;
 	margin-bottom: 0;
@@ -269,28 +275,44 @@ header a.nav:hover:before {
 	box-shadow: 0 0 2px black;
 }
 
-.main.award {
+.main.top {
 	padding: 0;
 }
 
-.main.award > div {
+.main.top > div {
 	margin-bottom: 0;
 	padding-bottom: 2em;
 	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.main.top img {
+	border-radius: 0;
+	margin: 0;
+	box-shadow: none;
+	width: auto;
+	height: 150px;
+	mix-blend-mode: lighten;
+	display: inline;
+}
+
+.main.top ol {
+	margin-bottom: 0;
 }
 
 .main h2 {
 	line-height: 1.3;
 	font-size: 1.1em;
 	color: rgba(255, 255, 255, 0.85);
+	margin: 0 0 1em 0;
 }
 
 .main img {
 	width: 40%;
 	border-radius: 5px;
-	margin: 0.5em 0 1em 0;
+	margin: 0;
 	box-shadow: 0 0 2px 0 black;
-	display: block;
+	flex-shrink: 0;
+	order: -1; /* Move image to the start */
 }
 
 .main.award img {
@@ -307,8 +329,9 @@ header a.nav:hover:before {
 	list-style-type: none;
 	list-style-position: inside;
 	counter-reset: li;
-	margin: 0 0 4em 0;
+	margin: 0;
 	padding: 0;
+	width: 100%;
 }
 
 .main.award ol {
@@ -319,23 +342,123 @@ header a.nav:hover:before {
 	line-height: 1.8;
 	font-size: 0.9em;
 	margin: 0 0 1em 0;
+	position: relative;
+	padding-left: 1.5em;
 }
 
 .main ol li:before {
-	counter-increment: li;
-	font-weight: 100;
-	content: counter(li);
-	padding-right: 0.3em;
-	color: rgba(138, 99, 210, 1); /* --bg-color */
-	display: inline-block;
-}
-.main ol li.none:before {
 	content: '';
-	padding-right: 0;
+	background-image: url('images/icon-bullet.svg');
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 1em;
+	height: 1em;
+	position: absolute;
+	left: 0;
+	top: 0.4em;
+	opacity: 0.8;
+}
+
+.main ol li.none:before {
+	display: none;
+}
+
+.main ol li.none {
+	padding-left: 0;
 }
 
 .main ol li a {
 	text-decoration: none;
 	color: rgba(138, 99, 210, 1); /* --bg-color */
 	font-weight: 600;
+}
+
+.sticky-nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 100;
+	width: 100%;
+	background-color: var(--bg-color);
+	transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sticky-nav ul {
+	position: relative;
+	display: block;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+	list-style: none;
+	margin: 0 auto;
+	padding: 0;
+	text-align: center;
+	max-width: 700px;
+}
+
+.sticky-nav ul li {
+	width: 49%;
+	display: inline-block;
+	padding: 20px;
+	margin: 0;
+	font-size: 0.8em;
+	text-align: left;
+	color: rgba(255, 255, 255, 0.8);
+	font-weight: 500;
+}
+
+.sticky-nav ul li + li {
+	text-align: right;
+}
+
+.sticky-nav ul li a {
+	text-decoration: none;
+	text-align: right;
+	color: rgba(255, 255, 255, 0.9);
+	background-color: rgba(25, 18, 38, 0.95);
+	padding: 3px 4px 3px 8px;
+	border-radius: 5px;
+	opacity: 0.9;
+	transition: opacity 0.3s;
+}
+
+.sticky-nav ul li a:hover {
+	opacity: 1;
+}
+
+/* Add flex container for each content section */
+.main > div > section {
+	display: flex;
+	align-items: flex-start;
+	gap: 2em;
+	margin-bottom: 4em;
+}
+
+.main > div > section .text-group {
+	flex: 1;
+}
+
+.main h2 {
+	line-height: 1.3;
+	font-size: 1.1em;
+	color: rgba(255, 255, 255, 0.85);
+	margin: 0 0 1em 0;
+}
+
+.main img {
+	width: 40%;
+	border-radius: 5px;
+	margin: 0;
+	box-shadow: 0 0 2px 0 black;
+	flex-shrink: 0;
+	order: -1; /* Move image to the start */
+}
+
+.main ol {
+	list-style-type: none;
+	list-style-position: inside;
+	counter-reset: li;
+	margin: 0;
+	padding: 0;
+	width: 100%;
 }

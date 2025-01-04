@@ -182,12 +182,13 @@ header a.download:before {
 	content: '↓';
 }
 
+/* UNUSED - Kept for reference only. These are the original dark App Store buttons */
 header a.macos {
-	background-image: url(store/macos.svg);
+	background-image: url(store/macos.svg); /* Unused - dark version */
 	width: 152px;
 }
 header a.ios {
-	background-image: url(store/ios.svg);
+	background-image: url(store/ios.svg); /* Unused - dark version */
 	width: 115px;
 }
 header a.download:hover {
@@ -250,6 +251,7 @@ header a.nav:hover:before {
 	top: 0;
 	content: '↓';
 }
+/* ACTIVE - These white versions are currently used in the store section */
 .main.store a.macos {
 	background-image: url(store/macos-white.svg);
 	width: 157px;

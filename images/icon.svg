@@ -1,26 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<svg width="800px" height="800px" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
+<svg width="1024px" height="1024px" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
   <!-- Adding shadow for depth -->
   <defs>
     <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
-      <feComponentTransfer in="SourceAlpha">
-        <feFuncA type="table" tableValues="1 0" />
-      </feComponentTransfer>
-      <feGaussianBlur stdDeviation="10" result="blur"/>
-      <feOffset dx="5" dy="5" in="blur" result="offsetBlur"/>
-      <feFlood flood-color="rgba(0, 0, 0, 0.1)" result="color"/>
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feOffset dx="2" dy="2" in="blur" result="offsetBlur"/>
+      <feFlood flood-color="rgba(0, 0, 0, 0.08)" result="color"/>
       <feComposite in2="offsetBlur" operator="in"/>
       <feComposite in2="SourceAlpha" operator="in" />
     </filter>
+    <!-- Gradient for the frame -->
+    <linearGradient id="iconGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#9370D8; stop-opacity:1" />
+      <stop offset="45%" style="stop-color:#8A63D2; stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8158CB; stop-opacity:1" />
+    </linearGradient>
   </defs>
 
-  <!-- iOS app icon frame with #8A63D2 fill -->
-  <rect x="25" y="25" width="750" height="750" rx="150" ry="150" fill="#8A63D2" stroke="#D1D3D8" stroke-width="20" />
-  <rect x="35" y="35" width="730" height="730" rx="150" ry="150" fill="#8A63D2" stroke="none" filter="url(#shadow)" />
+  <!-- iOS app icon frame with gradient fill -->
+  <!-- BORDER START - Remove these comments to add the border -->
+  <rect x="32" y="32" width="960" height="960" rx="192" ry="192" fill="url(#iconGradient)" stroke="#E8E9ED" stroke-width="24" />
+  <!-- BORDER END -->
+  
+  <!-- Main icon background -->
+  <rect x="45" y="45" width="934" height="934" rx="192" ry="192" fill="url(#iconGradient)" stroke="none" filter="url(#shadow)" />
 
-  <!-- Your original SVG content (scaled down to 80% and now centered with a smaller right adjustment) -->
-  <g transform="matrix(12.8 0 0 12.8 95 60)">
-    <g fill="#f2f2f7">
+  <!-- Simplified binoculars icon -->
+  <g transform="matrix(16.4 0 0 16.4 122 77)">
+    <g fill="#f8f8ff">
       <circle cx="33" cy="16" r="6"/>
       <circle cx="15" cy="16" r="6"/>
       <path d="M46.7 25l-15.3 3H16.7L1.4 25l4.3-7.9C6.8 15.2 8.8 14 11 14h26.2c2.2 0 4.2 1.2 5.3 3.1l4.2 7.9z"/>
@@ -28,11 +35,11 @@
       <circle cx="10" cy="30" r="10"/>
       <circle cx="24" cy="28" r="5"/>
     </g>
-    <circle cx="24" cy="28" r="2" fill="#B39DDB"/>
+    <circle cx="24" cy="28" r="2" fill="#8A63D2"/>
     <g fill="#8A63D2">
       <circle cx="38" cy="30" r="7"/>
       <circle cx="10" cy="30" r="7"/>
     </g>
-    <path fill="#ce93d8" d="M41.7 27.7c-1-1.1-2.3-1.7-3.7-1.7-1.4 0-2.8.6-3.7 1.7-.4.4-.3 1 .1 1.4.4.4 1 .3 1.4-.1 1.2-1.3 3.3-1.3 4.5 0 .2.2.5.3.7.3.2 0 .5-.1.7-.3.4-.3.4-.9 0-1.3zM10 26c-1.4 0-2.8.6-3.7 1.7-.4.4-.3 1 .1 1.4.4.4 1 .3 1.4-.1 1.2-1.3 3.3-1.3 4.5 0 .2.2.5.3.7.3.2 0 .5-.1.7-.3.4-.4.4-1 .1-1.4-1-1-2.4-1.6-3.8-1.6z"/>
+    <path fill="#c48fd8" d="M41.7 27.7c-1-1.1-2.3-1.7-3.7-1.7-1.4 0-2.8.6-3.7 1.7-.4.4-.3 1 .1 1.4.4.4 1 .3 1.4-.1 1.2-1.3 3.3-1.3 4.5 0 .2.2.5.3.7.3.2 0 .5-.1.7-.3.4-.3.4-.9 0-1.3zM10 26c-1.4 0-2.8.6-3.7 1.7-.4.4-.3 1 .1 1.4.4.4 1 .3 1.4-.1 1.2-1.3 3.3-1.3 4.5 0 .2.2.5.3.7.3.2 0 .5-.1.7-.3.4-.4.4-1 .1-1.4-1-1-2.4-1.6-3.8-1.6z"/>
   </g>
 </svg> 

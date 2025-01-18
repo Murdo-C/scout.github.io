@@ -462,3 +462,92 @@ header a.nav:hover:before {
 	padding: 0;
 	width: 100%;
 }
+
+/* Terms of Service specific styles */
+.terms-content {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 2rem;
+	line-height: 1.6;
+	background-color: var(--content-bg-color);
+	color: var(--content-color);
+}
+
+.terms-content h1 {
+	text-align: center;
+	margin-bottom: 2rem;
+	color: var(--content-title-color);
+}
+
+.terms-content h2 {
+	margin-top: 2rem;
+	margin-bottom: 1rem;
+	color: var(--content-title-color);
+}
+
+.terms-content p {
+	margin-bottom: 1rem;
+	color: var(--content-color);
+}
+
+.terms-content ul {
+	margin-bottom: 1rem;
+	padding-left: 2rem;
+	color: var(--content-color);
+}
+
+.terms-content li {
+	margin-bottom: 0.5rem;
+}
+
+.terms-content strong {
+	color: var(--content-title-color);
+}
+
+.terms-content hr {
+	padding: 0;
+	margin: 4em 0;
+	height: 3px;
+	background: var(--bg-color);
+	border: none;
+}
+
+.terms-content .contact-list {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+.terms-content .contact-list li {
+	line-height: 1.8;
+	font-size: 0.9em;
+	margin: 0 0 1em 0;
+	padding: 0;
+}
+
+.terms-content .contact-list a {
+	text-decoration: none;
+	color: var(--bg-color);
+	font-weight: 600;
+}
+
+.terms-content .contact-list a:hover {
+	opacity: 0.9;
+}
+
+.terms-content a {
+	text-decoration: none;
+	color: var(--bg-color);
+	font-weight: 600;
+}
+
+.terms-content a:hover {
+	opacity: 0.9;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+	.terms-content {
+		padding: 1rem;
+	}
+}

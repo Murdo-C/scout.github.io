@@ -236,7 +236,7 @@ header a.nav:hover:before {
 	margin-bottom: 0;
 }
 
-.main.store a.download {
+.main.store .download {
 	display: inline-block;
 	margin: 0.5em 0.2em;
 	padding-left: 0.9em;
@@ -249,8 +249,9 @@ header a.nav:hover:before {
 	box-shadow: 0 0 2px black;
 	z-index: 1;
 	transition: opacity 0.2s, box-shadow 0.2s, transform 0.3s;
+	position: relative;
 }
-.main.store a.download:before {
+.main.store .download:before {
 	opacity: 0.33;
 	position: absolute;
 	left: 0;
@@ -258,11 +259,11 @@ header a.nav:hover:before {
 	content: '↓';
 }
 /* ACTIVE - These white versions are currently used in the store section */
-.main.store a.macos {
+.main.store .macos {
 	background-image: url(store/macos-white.svg);
 	width: 157px;
 }
-.main.store a.ios {
+.main.store .ios {
 	background-image: url(store/ios-white.svg);
 	width: 120px;
 }
@@ -273,6 +274,20 @@ header a.nav:hover:before {
 .main.store a.download:active {
 	opacity: 1;
 	box-shadow: 0 0 2px black;
+}
+.main.store .download.unavailable {
+	opacity: 0.5;
+	box-shadow: none;
+	cursor: default;
+	filter: grayscale(1);
+}
+.main.store .download.unavailable:before {
+	content: '';
+}
+.main.store .store-note {
+	margin: 0.2em 0 0;
+	color: rgba(255, 255, 255, 0.7);
+	font-size: 0.9em;
 }
 
 .main.top {
